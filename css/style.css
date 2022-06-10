@@ -5,13 +5,39 @@ body, html {
 
 body {
   box-sizing: border-box;
-  font-size: 100%;
+  font-size: 150%;
+  margin: 0;
+  padding: 0.2em;
   background-image: url("/images/5.jpg");
   background-size: cover;
 }  
 
+h1, i{
+  font-size: 1.5em;
+  color: #fff;
+}
 h1 {
   display: inline-block;
-  width: 70%;
-  margin-left: 2em;
+  width: 85%;
+}
+p {
+  background-color: #fff;
+  padding: 0.3em;
+  height: 1em;
+  font-size: 1.5em;
+  border-radius: 0.4em;
+  margin: 0.2rem;
+}
+p input {
+  font-size: 1.5rem;
+  height: 1em;
+  width: 1em;
+}
+img {
+  width: 2rem;
+  height: 2rem;
+  float: right;
+}
+.fa-star {
+  
 }
