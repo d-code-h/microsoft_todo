@@ -5,6 +5,7 @@ body, html {
 
 body {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
   font-size: 150%;
   margin: 0;
   padding: 0.2em;
@@ -13,31 +14,56 @@ body {
 }  
 
 h1, i{
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #fff;
 }
 h1 {
   display: inline-block;
+  font-weight: bolder;
   width: 85%;
 }
 p {
   background-color: #fff;
-  padding: 0.3em;
-  height: 1em;
-  font-size: 1.5em;
+  padding: 0.3em 1rem 0.3rem 0.8rem;
+  height: 3em;
+  font-size: 0.7em;
   border-radius: 0.4em;
   margin: 0.2rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
 }
 p input {
   font-size: 1.5rem;
   height: 1em;
   width: 1em;
 }
+#status {
+  margin-right: 0.8rem;
+}
 img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: auto;
+}
+
+span .fa-plus {
+  width: 2.5em;
+  height: 2.5em;
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+  background-color: #fff;
+  position: fixed;
+  top: 87%;
+  left: 75%;
+  /*font-size: 3rem;*/
+}
+.fa-plus {
+  color: #000;
   width: 2rem;
   height: 2rem;
-  float: right;
-}
-.fa-star {
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
 }
