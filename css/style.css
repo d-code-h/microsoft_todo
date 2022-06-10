@@ -1,0 +1,11 @@
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: red;
+  font-size: 1em;
+  font-family: Verdana Sans-Serif;
+}  
