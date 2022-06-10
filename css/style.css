@@ -5,7 +5,12 @@ body, html {
 
 body {
   box-sizing: border-box;
-  background-color: red;
+  background-image: red;
   font-size: 1em;
-  font-family: Verdana Sans-Serif;
 }  
+
+h1 {
+  display: inline-block;
+  width: 70%;
+  margin-left: 2em;
+}
