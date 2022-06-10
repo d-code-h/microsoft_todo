@@ -2,17 +2,22 @@ body, html {
   width: 100%;
   height: 100%;
 }
-
+body, header {
+  background-image: url("/images/5.jpg");
+  background-size: cover;
+}
 body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-size: 150%;
   margin: 0;
   padding: 0.2em;
-  background-image: url("/images/5.jpg");
-  background-size: cover;
 }  
 
+header {
+  position: sticky;
+  top: 0;
+}
 h1, i{
   font-size: 1.2em;
   color: #fff;
@@ -50,7 +55,7 @@ img {
 span .fa-plus {
   width: 2.5em;
   height: 2.5em;
-  border: 0.1rem solid #fff;
+  border: 0.1rem solid #aaa;
   border-radius: 50%;
   background-color: #fff;
   position: fixed;
