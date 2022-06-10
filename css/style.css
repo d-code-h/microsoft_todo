@@ -6,6 +6,8 @@ body, html {
 body {
   box-sizing: border-box;
   font-size: 100%;
+  background-image: url("/images/5.jpg");
+  background-size: cover;
 }  
 
 h1 {
