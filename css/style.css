@@ -5,8 +5,7 @@ body, html {
 
 body {
   box-sizing: border-box;
-  background-image: red;
-  font-size: 1em;
+  font-size: 100%;
 }  
 
 h1 {
