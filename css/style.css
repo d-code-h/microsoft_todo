@@ -27,10 +27,10 @@ h1 {
   font-weight: bolder;
   width: 85%;
 }
-#lists p {
+p {
   background-color: #fff;
 }
-p, #completed{
+p, #completed-header{
   padding: 0.3em 1rem 0.3rem 0.8rem;
   height: 3em;
   font-size: 0.7em;
@@ -74,10 +74,10 @@ span .fa-plus {
   align-items: center;
   border: 1px solid red;
 }
-#completed i, #completed span {
+#completed-header i, #completed-header span {
   margin-right: 0.5rem;
 }
-#completed{
+#completed-header{
   color: #fff;
   font-weight: 400;
 }
