@@ -66,15 +66,14 @@ span .fa-plus {
   position: fixed;
   top: 87%;
   left: 75%;
-  /*font-size: 3rem;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .fa-plus {
   color: #000;
   width: 2rem;
   height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Completed Todo Section*/
@@ -96,6 +95,7 @@ span .fa-plus {
 #form {
   background-color: #fff;
   padding: 0.3rem;
+  display: none;
 }
 input:disabled, input[name="add"], button {
   height: 1.5rem;

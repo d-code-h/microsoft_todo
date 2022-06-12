@@ -8,3 +8,16 @@ document.getElementById("completed-header").addEventListener("click", function()
     document.getElementById("completed-content").style.display = "none";
   }
 });
+
+document.querySelector("span .fa-plus").addEventListener("click", function(){
+  document.getElementById("form").style.display = "block";
+  this.style.display = "none";
+})
+
+document.querySelector('input[name="add"]').addEventListener("blur", function(){
+  document.querySelector("span  .fa-plus").style.display = "flex";
+  document.getElementById("form").style.display = "none";
+})
+window.addEventListener("resize", (e) => {
+        console.log(e.target);
+      });
