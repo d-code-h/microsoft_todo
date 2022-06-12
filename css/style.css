@@ -1,8 +1,8 @@
+/*Main and Top Section*/
 body, html {
   width: 100%;
   height: 100%;
 }
-
 body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -10,12 +10,10 @@ body {
   margin: 0;
   padding: 0.2em;
 }  
-
 body, header {
   background-image: url("/images/5.jpg");
   background-size: cover;
 }
-
 header {
   position: sticky;
   top: 0;
@@ -29,6 +27,8 @@ h1 {
   font-weight: bolder;
   width: 85%;
 }
+
+/* Undone Todo Section*/
 p {
   background-color: #fff;
 }
@@ -56,6 +56,7 @@ img {
   margin-left: auto;
 }
 
+/* Todo Add Button*/
 span .fa-plus {
   width: 2.5em;
   height: 2.5em;
@@ -75,6 +76,8 @@ span .fa-plus {
   justify-content: center;
   align-items: center;
 }
+
+/* Completed Todo Section*/
 #completed-header i, #completed-header span {
   margin-right: 0.5rem;
 }
@@ -82,6 +85,49 @@ span .fa-plus {
   color: #fff;
   font-weight: 400;
 }
+#completed-header i:first-child {
+  width: 1rem;  
+}
 #completed-content {
   display: none;
+}
+
+/* Add Todo Section*/
+#form {
+  background-color: #fff;
+  padding: 0.3rem;
+}
+input:disabled, input[name="add"], button {
+  height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+input:disabled {
+  width: 10%;
+  margin: 0;
+}
+input[name="add"] {
+  margin: 0;
+  width: 70%;
+}
+input[name="add"], input[name="add"]:focus {
+  border: none;
+  outline: none;
+}
+input[name="add"]{
+  padding: 0.5rem;
+}
+button {
+  margin-left: auto;
+  width: 8%;
+  height: 1.7rem;
+  padding: 0.1rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #ccc;
+}
+button i {
+  font-size: 1.2rem;
+  margin: auto;
 }
