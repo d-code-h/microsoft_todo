@@ -96,12 +96,13 @@ span .fa-plus {
   background-color: #fff;
   padding: 0.3rem;
   display: none;
+  color: #808080;
 }
-input:disabled, input[name="add"], button {
+
+#form p, input:disabled, input[name="add"], button {
   height: 1.5rem;
   font-size: 1rem;
   font-weight: 300;
-  margin-bottom: 3rem;
 }
 input:disabled {
   width: 10%;
