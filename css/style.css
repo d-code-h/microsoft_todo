@@ -55,6 +55,9 @@ img {
   height: 1.5rem;
   margin-left: auto;
 }
+.fa-arrow-up:hover {
+  background-color: #7fffd4;
+}
 
 /* Todo Add Button*/
 span .fa-plus {
@@ -69,6 +72,7 @@ span .fa-plus {
   display: flex;
   justify-content: center;
   align-items: center;
+   
 }
 .fa-plus {
   color: #000;
