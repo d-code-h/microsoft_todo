@@ -22,7 +22,33 @@ window.addEventListener("load", function(){
       
   document.querySelector("form").addEventListener("submit", function(event){
     event.preventDefault();
-    //let todo = document.querySelector("input[name='add'").value;
-    //alert(todo);
+    let todo = document.querySelector("input[name='add'] ").value;
+    // ELements
+    // input
+    let input = document.createElement("input");
+    input.setAttribute("type", "radio");
+    input.setAttribute("name", "status");
+    input.setAttribute("id", "status");
+    // span
+    let span = document.createElement("span");
+    let content = document.createTextNode(todo);
+    span.appendChild(content);
+    // image
+    let img = document.createElement("img");
+    img.setAttribute("src", "/images/star.png");
+    img.setAttribute("alt", "A star icon");
+    // paragraph
+    let para = document.createElement("p");
+    para.appendChild(input);
+    para.appendChild(span);
+    para.appendChild(img);
+    
+    let firstTodo = document.querySelector("#lists p");
+    if(firstTodo === null){
+      document.getElementById("lists").appendChild(para);
+    }else {
+      document.getElementById("lists").insertBefore(para, firstTodo);
+    }
+    document.querySelector("input[name='add'] ").value = "";
   } )
 })  
