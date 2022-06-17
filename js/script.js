@@ -1,7 +1,3 @@
-function submit(){
-  alert("Sent")
-}
-
 window.addEventListener("load", function(){
   document.getElementById("completed-header").addEventListener("click", function(){
   let content = document.getElementById("completed-content").style.display;
@@ -23,8 +19,10 @@ window.addEventListener("load", function(){
   document.querySelector("span  .fa-plus").style.display = "flex";
   document.getElementById("form").style.display = "none";
 })
-
-  window.addEventListener("resize", (e) => {
-        console.log(e.target);
-      });
+      
+  document.querySelector("form").addEventListener("submit", function(event){
+    event.preventDefault();
+    //let todo = document.querySelector("input[name='add'").value;
+    //alert(todo);
+  } )
 })  
