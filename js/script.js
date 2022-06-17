@@ -62,6 +62,8 @@ window.addEventListener("load", function(){
     }else {
       document.getElementById("completed-content").insertBefore(d, done);
     }
+    let counter = document.getElementById("counter").innerHTML;
+    document.getElementById("counter").innerHTML = Number(counter) + 1;
     }
   });
 });
