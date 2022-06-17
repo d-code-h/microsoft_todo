@@ -51,4 +51,17 @@ window.addEventListener("load", function(){
     }
     document.querySelector("input[name='add'] ").value = "";
   } )
-})  
+  
+  document.querySelector("#lists").addEventListener("click", function(e){
+    if(e.target.hasAttribute("name")){
+      let d = e.target.parentElement;
+
+      let done = document.querySelector("#completed-content p");
+    if(done === null){
+      document.getElementById("completed-content").appendChild(d);
+    }else {
+      document.getElementById("completed-content").insertBefore(d, done);
+    }
+    }
+  });
+});
