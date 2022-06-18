@@ -51,11 +51,12 @@ p input {
 #status {
   margin-right: 0.8rem;
 } 
-img {
+.fa-star, img {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: auto;
 }
+
 .fa-arrow-up:hover {
   background-color: #00f;
 }
@@ -169,6 +170,7 @@ span #cal {
   margin-left: 0.3rem;
 }
 
+<<<<<<< HEAD
 @media only screen and (min-width:600px) {
   body, html {
   width: 100%;
@@ -214,3 +216,11 @@ span #cal {
     margin-top: 2%;
   }
 }
+=======
+.fa-regular {
+  color: #606060;
+}
+.fa-solid {
+  color: #0000dd;
+}
+>>>>>>> origin/master

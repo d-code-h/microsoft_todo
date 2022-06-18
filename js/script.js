@@ -22,26 +22,28 @@ window.addEventListener("load", function(){
       
   document.querySelector("form").addEventListener("submit", function(event){
     event.preventDefault();
-    let todo = document.querySelector("input[name='add'] ").value;
+    let todo = document.querySelector("input[name='add']").value.trim();
+    if (todo !== "") {
     // ELements
     // input
     let input = document.createElement("input");
     input.setAttribute("type", "radio");
-    input.setAttribute("name", "status");
+    input.setAttribute("name", todo);
     input.setAttribute("id", "status");
     // span
     let span = document.createElement("span");
     let content = document.createTextNode(todo);
     span.appendChild(content);
+    
     // image
-    let img = document.createElement("img");
-    img.setAttribute("src", "/images/star.png");
-    img.setAttribute("alt", "A star icon");
+    let ico = document.createElement("i");
+    ico.setAttribute("class", "fa-regular fa-star");
+
     // paragraph
     let para = document.createElement("p");
     para.appendChild(input);
     para.appendChild(span);
-    para.appendChild(img);
+    para.appendChild(ico);
     
     let firstTodo = document.querySelector("#lists p");
     if(firstTodo === null){
@@ -50,10 +52,11 @@ window.addEventListener("load", function(){
       document.getElementById("lists").insertBefore(para, firstTodo);
     }
     document.querySelector("input[name='add'] ").value = "";
-  } )
-  
+  }
+    })
   document.querySelector("#lists").addEventListener("click", function(e){
     if(e.target.hasAttribute("name")){
+      e.target.setAttribute("checked", "checked")
       let d = e.target.parentElement;
 
       let done = document.querySelector("#completed-content p");
@@ -64,6 +67,43 @@ window.addEventListener("load", function(){
     }
     let counter = document.getElementById("counter").innerHTML;
     document.getElementById("counter").innerHTML = Number(counter) + 1;
-    }
+    }else if(e.target.classList[0] === "fa-regular"){
+      e.target.setAttribute("class", "fa-solid fa-star");
+      let d = e.target.parentElement;
+      let initial = document.querySelector("#lists p");
+      if(initial !== null){
+        document.getElementById("lists").insertBefore(d, initial);
+      }
+    }else if(e.target.classList[0] === "fa-solid"){
+      e.target.setAttribute("class", "fa-regular fa-star");
+      let d = e.target.parentElement;
+      let initial = document.querySelectorAll("#lists i.fa-regular")[1].parentElement;
+      if(initial !== null){
+        document.getElementById("lists").insertBefore(d, initial);
+      }
+      }
   });
+  document.querySelector("#completed-content").addEventListener("click", function(e){
+    if(e.target.hasAttribute("name")){
+      e.target.checked = false;
+      let d = e.target.parentElement;
+      document.getElementById("lists").appendChild(d);
+    let counter = document.getElementById("counter").innerHTML;
+    document.getElementById("counter").innerHTML = Number(counter) - 1;
+    }else if(e.target.classList[0] === "fa-regular"){
+      e.target.setAttribute("class", "fa-solid fa-star");
+      let d = e.target.parentElement;
+      let initial = document.querySelector("#completed-content p");
+      if(initial !== null){
+        document.getElementById("completed-content").insertBefore(d, initial);
+      }
+    }else if(e.target.classList[0] === "fa-solid"){
+      e.target.setAttribute("class", "fa-regular fa-star");
+      let d = e.target.parentElement;
+      let initial = document.querySelectorAll("#completed-content i.fa-regular")[1].parentElement;
+      if(initial !== null){
+        document.getElementById("completed-content").insertBefore(d, initial);
+      }
+      }
+  })
 });
