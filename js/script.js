@@ -22,7 +22,8 @@ window.addEventListener("load", function(){
       
   document.querySelector("form").addEventListener("submit", function(event){
     event.preventDefault();
-    let todo = document.querySelector("input[name='add'] ").value;
+    let todo = document.querySelector("input[name='add']").value.trim();
+    if (todo !== "") {
     // ELements
     // input
     let input = document.createElement("input");
@@ -51,8 +52,8 @@ window.addEventListener("load", function(){
       document.getElementById("lists").insertBefore(para, firstTodo);
     }
     document.querySelector("input[name='add'] ").value = "";
-  } )
-  
+  }
+    })
   document.querySelector("#lists").addEventListener("click", function(e){
     if(e.target.hasAttribute("name")){
       let d = e.target.parentElement;
