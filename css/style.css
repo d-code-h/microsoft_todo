@@ -50,11 +50,12 @@ p input {
 #status {
   margin-right: 0.8rem;
 } 
-img {
+i.fa-star, img {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: auto;
 }
+
 .fa-arrow-up:hover {
   background-color: #00f;
 }
@@ -159,4 +160,11 @@ span #cal {
 }
 #form p span:nth-child(2), #form p span:nth-child(3) {
   margin-left: 0.3rem;
+}
+
+.fa-regular {
+  color: #606060;
+}
+.fa-solid {
+  color: #0000dd;
 }
