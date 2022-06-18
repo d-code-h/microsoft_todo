@@ -19,13 +19,14 @@ header {
   top: 0;
 }
 h1, i{
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #fff;
+  margin-left: 4%;
 }
 h1 {
   display: inline-block;
   font-weight: bolder;
-  width: 85%;
+  width: 76%;
 }
 
 /* Undone Todo Section*/
@@ -50,7 +51,7 @@ p input {
 #status {
   margin-right: 0.8rem;
 } 
-i.fa-star, img {
+.fa-star, img {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: auto;
@@ -69,7 +70,7 @@ span .fa-plus {
   background-color: #fff;
   position: fixed;
   top: 87%;
-  left: 75%;
+  left: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,6 +85,7 @@ span .fa-plus {
 /* Completed Todo Section*/
 #completed-header i, #completed-header span {
   margin-right: 0.5rem;
+  
 }
 #completed-header{
   color: #fff;
@@ -91,6 +93,8 @@ span .fa-plus {
 }
 #completed-header i:first-child {
   width: 1rem;  
+  text-align: center;
+  margin-right: 0.8rem;
 }
 #completed-content {
   display: none;
@@ -106,11 +110,8 @@ span .fa-plus {
 
 #form p, input:disabled, input[name="add"], button {
   height: 1.5rem;
-  /*font-size: 1rem;*/
   font-size: 0.88rem;
-  /*font-weight: 300;*/
-  font-weight: 320;
-  
+  font-weight: 300;
 }
 #form p {
   padding-left: 0.3rem;
@@ -118,8 +119,8 @@ span .fa-plus {
 }
 input:disabled {
   width: 10%;
-  margin-left: 1rem;
-  margin-top: 0.3rem;
+  margin-left: 3.333%;
+  margin-top: 1%;
 }
 input[name="add"] {
   margin: 0;
@@ -167,4 +168,50 @@ span #cal {
 }
 .fa-solid {
   color: #0000dd;
+}
+
+@media only screen and (min-width:600px) {
+  body, html {
+  width: 100%;
+  height: 100%;
+  }
+  body {
+    font-size: 200%;
+  }
+  h1, i{
+    font-size: 1.2em;
+    color: #fff;
+    /*margin-left: 10%;*/
+  }
+  h1 {
+    display: inline-block;
+    font-weight: bolder;
+    width: 45%;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Undone Todo Section*/
+  #main {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+  }
+ #completed, #lists {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+  }
+  #lists {
+    margin-right: 5%;
+  }
+  #form {
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+  }
 }
