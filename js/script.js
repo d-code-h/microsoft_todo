@@ -33,15 +33,16 @@ window.addEventListener("load", function(){
     let span = document.createElement("span");
     let content = document.createTextNode(todo);
     span.appendChild(content);
+    
     // image
-    let img = document.createElement("img");
-    img.setAttribute("src", "/images/star.png");
-    img.setAttribute("alt", "A star icon");
+    let ico = document.createElement("i");
+    ico.setAttribute("class", "fa-regular fa-star");
+
     // paragraph
     let para = document.createElement("p");
     para.appendChild(input);
     para.appendChild(span);
-    para.appendChild(img);
+    para.appendChild(ico);
     
     let firstTodo = document.querySelector("#lists p");
     if(firstTodo === null){
@@ -64,6 +65,20 @@ window.addEventListener("load", function(){
     }
     let counter = document.getElementById("counter").innerHTML;
     document.getElementById("counter").innerHTML = Number(counter) + 1;
-    }
+    }else if(e.target.classList[0] === "fa-regular"){
+      e.target.setAttribute("class", "fa-solid fa-star");
+      let d = e.target.parentElement;
+      let initial = document.querySelector("#lists p");
+      if(initial !== null){
+        document.getElementById("lists").insertBefore(d, initial);
+      }
+    }else if(e.target.classList[0] === "fa-solid"){
+      e.target.setAttribute("class", "fa-regular fa-star");
+      let d = e.target.parentElement;
+      let initial = document.querySelectorAll("#lists i.fa-regular")[1].parentElement;
+      if(initial !== null){
+        document.getElementById("lists").insertBefore(d, initial);
+      }
+      }
   });
 });
