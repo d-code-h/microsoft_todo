@@ -3,9 +3,10 @@ body, html {
   width: 100%;
   height: 100%;
 }
-html {
+header, html {
   background-image: url("https://images.unsplash.com/photo-1653676934208-021a2b5e7ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM2fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 body {
   box-sizing: border-box;
@@ -167,7 +168,7 @@ span #cal {
   color: #606060;
 }
 .fa-solid {
-  color: #0000dd;
+  color: #0060df;
 }
 
 @media only screen and (min-width:600px) {
@@ -206,6 +207,8 @@ span #cal {
     display: inline-block;
     width: 45%;
     vertical-align: top;
+    height: 12.9em;
+    overflow: auto;
   }
   #lists {
     margin-right: 5%;
