@@ -171,6 +171,24 @@ span #cal {
   color: #0060df;
 }
 
+section::-webkit-scrollbar {
+  width: 0.4rem;
+}
+/* Track */
+section::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+section::-webkit-scrollbar-thumb {
+  background: #909090; 
+}
+
+/* Handle on hover */
+section::-webkit-scrollbar-thumb:hover {
+  background: #0060df; 
+}
+
 @media only screen and (min-width:600px) {
   body, html {
   width: 100%;
