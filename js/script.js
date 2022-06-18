@@ -28,7 +28,7 @@ window.addEventListener("load", function(){
     // input
     let input = document.createElement("input");
     input.setAttribute("type", "radio");
-    input.setAttribute("name", "status");
+    input.setAttribute("name", todo);
     input.setAttribute("id", "status");
     // span
     let span = document.createElement("span");
@@ -56,6 +56,7 @@ window.addEventListener("load", function(){
     })
   document.querySelector("#lists").addEventListener("click", function(e){
     if(e.target.hasAttribute("name")){
+      e.target.setAttribute("checked", "checked")
       let d = e.target.parentElement;
 
       let done = document.querySelector("#completed-content p");
@@ -82,4 +83,27 @@ window.addEventListener("load", function(){
       }
       }
   });
+  document.querySelector("#completed-content").addEventListener("click", function(e){
+    if(e.target.hasAttribute("name")){
+      e.target.checked = false;
+      let d = e.target.parentElement;
+      document.getElementById("lists").appendChild(d);
+    let counter = document.getElementById("counter").innerHTML;
+    document.getElementById("counter").innerHTML = Number(counter) - 1;
+    }else if(e.target.classList[0] === "fa-regular"){
+      e.target.setAttribute("class", "fa-solid fa-star");
+      let d = e.target.parentElement;
+      let initial = document.querySelector("#completed-content p");
+      if(initial !== null){
+        document.getElementById("completed-content").insertBefore(d, initial);
+      }
+    }else if(e.target.classList[0] === "fa-solid"){
+      e.target.setAttribute("class", "fa-regular fa-star");
+      let d = e.target.parentElement;
+      let initial = document.querySelectorAll("#completed-content i.fa-regular")[1].parentElement;
+      if(initial !== null){
+        document.getElementById("completed-content").insertBefore(d, initial);
+      }
+      }
+  })
 });
