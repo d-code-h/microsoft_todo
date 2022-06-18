@@ -110,22 +110,15 @@ span .fa-plus {
 
 #form p, input:disabled, input[name="add"], button {
   height: 1.5rem;
-  /*font-size: 1rem;*/
   font-size: 0.88rem;
-  /*font-weight: 300;*/
-  font-weight: 320;
-  
+  font-weight: 300;
 }
 #form p {
   padding-left: 0.3rem;
   padding-right: 0.3rem;
-  /*padding-left: 1%;
-  padding-right: 1%;*/
 }
 input:disabled {
   width: 10%;
-  /*margin-left: 1rem;
-  margin-top: 0.3rem;*/
   margin-left: 3.333%;
   margin-top: 1%;
 }
@@ -170,7 +163,13 @@ span #cal {
   margin-left: 0.3rem;
 }
 
-<<<<<<< HEAD
+.fa-regular {
+  color: #606060;
+}
+.fa-solid {
+  color: #0000dd;
+}
+
 @media only screen and (min-width:600px) {
   body, html {
   width: 100%;
@@ -216,11 +215,3 @@ span #cal {
     margin-top: 2%;
   }
 }
-=======
-.fa-regular {
-  color: #606060;
-}
-.fa-solid {
-  color: #0000dd;
-}
->>>>>>> origin/master
