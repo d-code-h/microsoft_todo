@@ -1,4 +1,57 @@
 window.addEventListener("load", function(){
+  function animate(e){
+    if(e.target.parentElement.parentElement.id === "lists"){
+      if(e.target.hasAttribute("name")){
+        e.target.checked = true;
+      let d = e.target.parentElement;
+      let done = document.querySelector("#completed-content p");
+        if(done === null){
+          document.getElementById("completed-content").appendChild(d);
+        }else {
+          document.getElementById("completed-content").insertBefore(d, done);
+        }
+    let counter = document.getElementById("counter").innerHTML;
+    document.getElementById("counter").innerHTML = Number(counter) + 1;
+      }else if(e.target.classList[0] === "fa-regular"){
+        e.target.setAttribute("class", "fa-solid fa-star");
+        let d = e.target.parentElement;
+        let initial = document.querySelector("#lists p");
+        if(initial !== null){
+          document.getElementById("lists").insertBefore(d, initial);
+        }
+      }else if(e.target.classList[0] === "fa-solid"){
+        e.target.setAttribute("class", "fa-regular fa-star");
+        let d = e.target.parentElement;
+        let initial = document.querySelectorAll("#lists i.fa-regular")[1].parentElement;
+        if(initial !== null){
+          document.getElementById("lists").insertBefore(d, initial);
+        }
+        }
+    }else{
+      if(e.target.hasAttribute("name")){
+      e.target.checked = false;
+      let d = e.target.parentElement;
+      document.getElementById("lists").appendChild(d);
+    let counter = document.getElementById("counter").innerHTML;
+    document.getElementById("counter").innerHTML = Number(counter) - 1;
+      }else if(e.target.classList[0] === "fa-regular"){
+        e.target.setAttribute("class", "fa-solid fa-star");
+        let d = e.target.parentElement;
+        let initial = document.querySelector("#completed-content p");
+        if(initial !== null){
+          document.getElementById("completed-content").insertBefore(d, initial);
+        }
+      }else if(e.target.classList[0] === "fa-solid"){
+        e.target.setAttribute("class", "fa-regular fa-star");
+        let d = e.target.parentElement;
+        let initial = document.querySelectorAll("#completed-content i.fa-regular")[1].parentElement;
+        if(initial !== null){
+          document.getElementById("completed-content").insertBefore(d, initial);
+        }
+        }
+    }
+  }
+  
   document.getElementById("completed-header").addEventListener("click", function(){
   let content = document.getElementById("completed-content").style.display;
   if (content === "" || content === "none"){
@@ -54,56 +107,12 @@ window.addEventListener("load", function(){
     document.querySelector("input[name='add'] ").value = "";
   }
     })
+    
   document.querySelector("#lists").addEventListener("click", function(e){
-    if(e.target.hasAttribute("name")){
-      e.target.setAttribute("checked", "checked")
-      let d = e.target.parentElement;
-
-      let done = document.querySelector("#completed-content p");
-    if(done === null){
-      document.getElementById("completed-content").appendChild(d);
-    }else {
-      document.getElementById("completed-content").insertBefore(d, done);
-    }
-    let counter = document.getElementById("counter").innerHTML;
-    document.getElementById("counter").innerHTML = Number(counter) + 1;
-    }else if(e.target.classList[0] === "fa-regular"){
-      e.target.setAttribute("class", "fa-solid fa-star");
-      let d = e.target.parentElement;
-      let initial = document.querySelector("#lists p");
-      if(initial !== null){
-        document.getElementById("lists").insertBefore(d, initial);
-      }
-    }else if(e.target.classList[0] === "fa-solid"){
-      e.target.setAttribute("class", "fa-regular fa-star");
-      let d = e.target.parentElement;
-      let initial = document.querySelectorAll("#lists i.fa-regular")[1].parentElement;
-      if(initial !== null){
-        document.getElementById("lists").insertBefore(d, initial);
-      }
-      }
+    animate(e);
   });
+  
   document.querySelector("#completed-content").addEventListener("click", function(e){
-    if(e.target.hasAttribute("name")){
-      e.target.checked = false;
-      let d = e.target.parentElement;
-      document.getElementById("lists").appendChild(d);
-    let counter = document.getElementById("counter").innerHTML;
-    document.getElementById("counter").innerHTML = Number(counter) - 1;
-    }else if(e.target.classList[0] === "fa-regular"){
-      e.target.setAttribute("class", "fa-solid fa-star");
-      let d = e.target.parentElement;
-      let initial = document.querySelector("#completed-content p");
-      if(initial !== null){
-        document.getElementById("completed-content").insertBefore(d, initial);
-      }
-    }else if(e.target.classList[0] === "fa-solid"){
-      e.target.setAttribute("class", "fa-regular fa-star");
-      let d = e.target.parentElement;
-      let initial = document.querySelectorAll("#completed-content i.fa-regular")[1].parentElement;
-      if(initial !== null){
-        document.getElementById("completed-content").insertBefore(d, initial);
-      }
-      }
+      animate(e);
   })
 });
