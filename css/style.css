@@ -4,7 +4,7 @@ body, html {
   height: 100%;
 }
 header, html {
-  background-image: url("https://images.unsplash.com/photo-1653676934208-021a2b5e7ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM2fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80");
+  background-image: url('https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -34,7 +34,7 @@ h1 {
 p {
   background-color: #fff;
 }
-p, #completed-header{
+p, #completed-header, #lists-header {
   padding: 0.3em 1rem 0.3rem 0.8rem;
   height: 3em;
   font-size: 0.7em;
@@ -84,15 +84,15 @@ span .fa-plus {
 }
 
 /* Completed Todo Section*/
-#completed-header i, #completed-header span {
+#completed-header i, #completed-header span, #lists-header i, #lists-header span {
   margin-right: 0.5rem;
   
 }
-#completed-header{
+#completed-header, #lists-header {
   color: #fff;
   font-weight: 400;
 }
-#completed-header i:first-child {
+#completed-header i:first-child, #lists-header i:first-child {
   width: 1rem;  
   text-align: center;
   margin-right: 0.8rem;
@@ -194,6 +194,11 @@ section::-webkit-scrollbar-thumb:hover {
   width: 100%;
   height: 100%;
   }
+  header, html {
+   background-image: url("https://images.unsplash.com/photo-1653676934208-021a2b5e7ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM2fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80");
+   background-size: cover;
+   background-repeat: no-repeat;
+  }
   body {
     /* background-size: auto; */
     font-size: 200%;
@@ -216,16 +221,12 @@ section::-webkit-scrollbar-thumb:hover {
     align-items: center;
   }
   /* Undone Todo Section*/
-  #main {
-    display: flex;
-    align-items: top;
-    justify-content: center;
-  }
- #completed, #lists {
+  
+ #completed, #main {
     display: inline-block;
     width: 45%;
     vertical-align: top;
-    height: 12.9em;
+   /* height: 12.9em;*/
     overflow: auto;
   }
   #lists {
