@@ -15,16 +15,16 @@ window.addEventListener("load", function(){
       }else if(e.target.classList[0] === "fa-regular"){
         e.target.setAttribute("class", "fa-solid fa-star");
         let d = e.target.parentElement;
-        let initial = document.querySelector("#lists p");
+        let initial = document.querySelector("#lists-content p");
         if(initial !== null){
-          document.getElementById("lists").insertBefore(d, initial);
+          document.getElementById("lists-content").insertBefore(d, initial);
         }
       }else if(e.target.classList[0] === "fa-solid"){
         e.target.setAttribute("class", "fa-regular fa-star");
         let d = e.target.parentElement;
-        let initial = document.querySelectorAll("#lists i.fa-regular")[1].parentElement;
+        let initial = document.querySelectorAll("#lists-content i.fa-regular")[1].parentElement;
         if(initial !== null){
-          document.getElementById("lists").insertBefore(d, initial);
+          document.getElementById("lists-content").insertBefore(d, initial);
         }
         }
     }else{
