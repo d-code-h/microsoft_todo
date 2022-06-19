@@ -10,8 +10,8 @@ window.addEventListener("load", function(){
         }else {
           document.getElementById("completed-content").insertBefore(d, done);
         }
-    let counter = document.getElementById("counter").innerHTML;
-    document.getElementById("counter").innerHTML = Number(counter) + 1;
+    document.getElementById("co-counter").innerHTML = Number(document.getElementById("co-counter").innerHTML) + 1;
+    document.getElementById("li-counter").innerHTML = Number(document.getElementById("li-counter").innerHTML) - 1;
       }else if(e.target.classList[0] === "fa-regular"){
         e.target.setAttribute("class", "fa-solid fa-star");
         let d = e.target.parentElement;
@@ -32,8 +32,9 @@ window.addEventListener("load", function(){
       e.target.checked = false;
       let d = e.target.parentElement;
       document.getElementById("lists").appendChild(d);
-    let counter = document.getElementById("counter").innerHTML;
-    document.getElementById("counter").innerHTML = Number(counter) - 1;
+
+    document.getElementById("co-counter").innerHTML = Number(document.getElementById("co-counter").innerHTML) - 1;
+    document.getElementById("li-counter").innerHTML = Number(document.getElementById("li-counter").innerHTML) + 1;
       }else if(e.target.classList[0] === "fa-regular"){
         e.target.setAttribute("class", "fa-solid fa-star");
         let d = e.target.parentElement;
@@ -55,14 +56,25 @@ window.addEventListener("load", function(){
   document.getElementById("completed-header").addEventListener("click", function(){
   let content = document.getElementById("completed-content").style.display;
   if (content === "" || content === "none"){
-    document.querySelector('i.fa-angle-right').setAttribute("class", "fa fa-angle-down");
+    document.querySelector('#co.fa-angle-right').setAttribute("class", "fa fa-angle-down");
     document.getElementById("completed-content").style.display = "block";
   } else{
-    document.querySelector('i.fa-angle-down').setAttribute("class", "fa fa-angle-right")
+    document.querySelector('#co.fa-angle-down').setAttribute("class", "fa fa-angle-right")
     document.getElementById("completed-content").style.display = "none";
   }
 });
-
+  
+  document.getElementById("lists-header").addEventListener("click", function(){
+  let content = document.getElementById("lists-content").style.display;
+  if (content === "" || content === "none"){
+    document.querySelector('#li.fa-angle-right').setAttribute("class", "fa fa-angle-down");
+    document.getElementById("lists-content").style.display = "block";
+  } else{
+    document.querySelector('#li.fa-angle-down').setAttribute("class", "fa fa-angle-right")
+    document.getElementById("lists-content").style.display = "none";
+  }
+});
+  
   document.querySelector("span .fa-plus").addEventListener("click", function(){
   document.getElementById("form").style.display = "block";
   this.style.display = "none";
@@ -104,6 +116,7 @@ window.addEventListener("load", function(){
     }else {
       document.getElementById("lists").insertBefore(para, firstTodo);
     }
+    document.getElementById("li-counter").innerHTML = Number(document.getElementById("li-counter").innerHTML) + 1;
     document.querySelector("input[name='add'] ").value = "";
   }
     })
