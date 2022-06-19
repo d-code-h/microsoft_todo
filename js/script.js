@@ -1,6 +1,6 @@
 window.addEventListener("load", function(){
   function animate(e){
-    if(e.target.parentElement.parentElement.id === "lists"){
+    if(e.target.parentElement.parentElement.id === "lists-content"){
       if(e.target.hasAttribute("name")){
         e.target.checked = true;
       let d = e.target.parentElement;
@@ -31,7 +31,7 @@ window.addEventListener("load", function(){
       if(e.target.hasAttribute("name")){
       e.target.checked = false;
       let d = e.target.parentElement;
-      document.getElementById("lists").appendChild(d);
+      document.getElementById("lists-content").appendChild(d);
 
     document.getElementById("co-counter").innerHTML = Number(document.getElementById("co-counter").innerHTML) - 1;
     document.getElementById("li-counter").innerHTML = Number(document.getElementById("li-counter").innerHTML) + 1;
@@ -110,18 +110,18 @@ window.addEventListener("load", function(){
     para.appendChild(span);
     para.appendChild(ico);
     
-    let firstTodo = document.querySelector("#lists p");
+    let firstTodo = document.querySelector("#lists-content p");
     if(firstTodo === null){
-      document.getElementById("lists").appendChild(para);
+      document.getElementById("lists-content").appendChild(para);
     }else {
-      document.getElementById("lists").insertBefore(para, firstTodo);
+      document.getElementById("lists-content").insertBefore(para, firstTodo);
     }
     document.getElementById("li-counter").innerHTML = Number(document.getElementById("li-counter").innerHTML) + 1;
     document.querySelector("input[name='add'] ").value = "";
   }
     })
     
-  document.querySelector("#lists").addEventListener("click", function(e){
+  document.querySelector("#lists-content").addEventListener("click", function(e){
     animate(e);
   });
   
