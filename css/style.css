@@ -57,7 +57,6 @@ p input {
   height: 1.5rem;
   margin-left: auto;
 }
-
 .fa-arrow-up:hover {
   background-color: #00f;
 }
@@ -75,7 +74,6 @@ span .fa-plus {
   display: flex;
   justify-content: center;
   align-items: center;
-   
 }
 .fa-plus {
   color: #000;
@@ -86,7 +84,6 @@ span .fa-plus {
 /* Completed Todo Section*/
 #completed-header i, #completed-header span, #lists-header i, #lists-header span {
   margin-right: 0.5rem;
-  
 }
 #completed-header, #lists-header {
   color: #fff;
@@ -108,7 +105,6 @@ span .fa-plus {
   display: none;
   color: #808080;
 }
-
 #form p, input:disabled, input[name="add"], button {
   height: 1.5rem;
   font-size: 0.88rem;
@@ -191,8 +187,8 @@ section::-webkit-scrollbar-thumb:hover {
 
 @media only screen and (min-width:600px) {
   body, html {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
   }
   header, html {
    background-image: url("https://images.unsplash.com/photo-1653676934208-021a2b5e7ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM2fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80");
@@ -200,7 +196,6 @@ section::-webkit-scrollbar-thumb:hover {
    background-repeat: no-repeat;
   }
   body {
-    /* background-size: auto; */
     font-size: 200%;
   }
   h1, i{
@@ -220,13 +215,12 @@ section::-webkit-scrollbar-thumb:hover {
     justify-content: center;
     align-items: center;
   }
-  /* Undone Todo Section*/
   
+  /* Undone Todo Section*/
  #completed, #main {
     display: inline-block;
     width: 45%;
     vertical-align: top;
-   /* height: 12.9em;*/
     overflow: auto;
   }
   #lists {
@@ -236,5 +230,35 @@ section::-webkit-scrollbar-thumb:hover {
     width: 50%;
     margin: auto;
     margin-top: 2%;
+  }
+  span .fa-plus {
+  width: 4em;
+  height: 4em;  
+  position: fixed;
+  top: 90%;
+  left: 76%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-plus {
+  color: #000;
+  width: 8rem;
+  height: 8rem;
+}
+}
+@media only screen and (orientation: landscape) {
+  span .fa-plus {
+    width: 1.5em;
+    height: 1.5em;  
+    top: 74%;
+    left: 87%;
+  }
+  .fa-plus {
+    width: 0.1rem;
+    height: 0.1rem;
+    font-size: 1.3rem;
+    padding: 0.9rem;
   }
 }
