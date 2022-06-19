@@ -65,6 +65,7 @@ window.addEventListener("load", function(){
 
   document.querySelector("span .fa-plus").addEventListener("click", function(){
   document.getElementById("form").style.display = "block";
+  document.querySelector('input[name="add"]').focus();
   this.style.display = "none";
 })
 
