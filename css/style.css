@@ -96,6 +96,7 @@ span .fa-plus {
 }
 #completed-content {
   display: none;
+  text-decoration: line-through;
 }
 
 /* Add Todo Section*/
