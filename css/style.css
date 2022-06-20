@@ -13,7 +13,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 150%;
   margin: 0;
-  padding: 0 0.2em 0.2em 0.2em;
 }  
 header {
   position: sticky;
@@ -105,15 +104,13 @@ span .fa-plus {
   padding: 0.3rem;
   display: none;
   color: #808080;
+  position: fixed;
+  bottom: 0;
 }
 #form p, input:disabled, input[name="add"], button {
   height: 1.5rem;
   font-size: 0.88rem;
   font-weight: 300;
-}
-#form p {
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
 }
 input:disabled {
   width: 10%;
@@ -152,7 +149,7 @@ span img, #cal {
   height: 1rem;
   width: 1rem;
   margin-left: 0.8rem;
-  margin-right: 0.5rem;
+  margin-right: 0.35rem;
 }
 span #cal {
   color: black;
@@ -202,7 +199,6 @@ section::-webkit-scrollbar-thumb:hover {
   h1, i{
     font-size: 1.2em;
     color: #fff;
-    /*margin-left: 10%;*/
   }
   h1 {
     display: inline-block;
@@ -229,9 +225,10 @@ section::-webkit-scrollbar-thumb:hover {
   }
   #form {
     width: 50%;
-    margin: auto;
+    margin-left: 25%;
     margin-top: 2%;
   }
+
   span .fa-plus {
   width: 4em;
   height: 4em;  
