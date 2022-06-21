@@ -115,4 +115,13 @@ window.addEventListener("load", function(){
   document.querySelector("#completed-content").addEventListener("click", function(e){
       animate(e);
   })
+  
+  document.querySelector('input[name="add"]').addEventListener("keyup", function(){
+    let empty = this.value.trim();
+    if(empty === ""){
+      document.getElementById("btn").style.backgroundColor = "#ccc";
+    }else{
+      document.getElementById("btn").style.backgroundColor = "#0060df";
+    }
+  });
 });
