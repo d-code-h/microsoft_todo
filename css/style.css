@@ -56,10 +56,13 @@ p input {
   height: 1.5rem;
   margin-left: auto;
 }
+<<<<<<< HEAD
+=======
 .fa-arrow-up:hover {
   background-color: #00f;
 }
 
+>>>>>>> origin/master
 /* Todo Add Button*/
 span .fa-plus {
   width: 2.5em;
