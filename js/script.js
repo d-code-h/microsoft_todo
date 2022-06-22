@@ -1,7 +1,7 @@
-window.addEventListener("load", function(){
-  function animate(e){
+window.addEventListener("load", () => {
+  let animate = (e) => {
     if(e.target.parentElement.parentElement.id === "lists-content"){
-      if(e.target.hasAttribute("name")){
+      if(e.target.getAttribute("type") === "radio"){
         e.target.checked = true;
       let d = e.target.parentElement;
       let done = document.querySelector("#completed-content p");
@@ -28,7 +28,7 @@ window.addEventListener("load", function(){
         }
         }
     }else{
-      if(e.target.hasAttribute("name")){
+      if(e.target.getAttribute("type") === "radio"){
       e.target.checked = false;
       let d = e.target.parentElement;
       document.getElementById("lists-content").appendChild(d);
@@ -53,7 +53,7 @@ window.addEventListener("load", function(){
     }
   }
   
-  document.getElementById("completed-header").addEventListener("click", function(){
+  document.getElementById("completed-header").addEventListener("click", () => {
   let content = document.getElementById("completed-content").style.display;
   if (content === "" || content === "none"){
     document.querySelector('#co.fa-angle-right').setAttribute("class", "fa fa-angle-down");
@@ -64,7 +64,7 @@ window.addEventListener("load", function(){
   }
 });
   
-  document.getElementById("lists-header").addEventListener("click", function(){
+  document.getElementById("lists-header").addEventListener("click", () => {
   let content = document.getElementById("lists-content").style.display;
   if (content === "" || content === "none"){
     document.querySelector('#li.fa-angle-right').setAttribute("class", "fa fa-angle-down");
@@ -75,18 +75,18 @@ window.addEventListener("load", function(){
   }
 });
   
-  document.querySelector("span .fa-plus").addEventListener("click", function(){
+  document.querySelector("span .fa-plus").addEventListener("click", () => {
   document.getElementById("form").style.display = "block";
   document.querySelector('input[name="add"]').focus();
   this.style.display = "none";
 })
 
-  document.querySelector('input[name="add"]').addEventListener("blur", function(){
+  document.querySelector('input[name="add"]').addEventListener("blur", () => {
   document.querySelector("span  .fa-plus").style.display = "flex";
   document.getElementById("form").style.display = "none";
 })
       
-  document.querySelector("form").addEventListener("submit", function(event){
+  document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
     let todo = document.querySelector("input[name='add']").value.trim();
     if (todo !== "") {
@@ -96,6 +96,11 @@ window.addEventListener("load", function(){
     input.setAttribute("type", "radio");
     input.setAttribute("name", todo);
     input.setAttribute("id", "status");
+    //delete checkbox
+    let check = document.createElement("input");
+    check.setAttribute("type", "checkbox");
+    check.setAttribute("name", "check");
+    
     // span
     let span = document.createElement("span");
     let content = document.createTextNode(todo);
@@ -108,6 +113,7 @@ window.addEventListener("load", function(){
     // paragraph
     let para = document.createElement("p");
     para.appendChild(input);
+    para.appendChild(check);
     para.appendChild(span);
     para.appendChild(ico);
     
@@ -122,15 +128,15 @@ window.addEventListener("load", function(){
   }
     })
     
-  document.querySelector("#lists-content").addEventListener("click", function(e){
+  document.querySelector("#lists-content").addEventListener("click", (e) => {
     animate(e);
   });
   
-  document.querySelector("#completed-content").addEventListener("click", function(e){
+  document.querySelector("#completed-content").addEventListener("click", (e) => {
       animate(e);
   })
   
-  document.querySelector('input[name="add"]').addEventListener("keyup", function(){
+  document.querySelector('input[name="add"]').addEventListener("keyup", () => {
     let empty = this.value.trim();
     if(empty === ""){
       document.getElementById("btn").style.backgroundColor = "#ccc";
@@ -139,7 +145,30 @@ window.addEventListener("load", function(){
     }
   });
 
-  document.getElementById("lists-content").addEventListener("dbclick", function(){
-    alert("You click it!")
+  document.getElementById("lists-content").addEventListener("dblclick", () => {
+    
+    if(document.querySelector('input[type="radio"').style.display === "inline"){
+      document.querySelectorAll('input[type="radio"').forEach((each) => {
+      each.style.display = "none";
+    })
+    
+    document.querySelectorAll('input[type="checkbox"]').forEach((each) => {
+      each.style.display = "inline";
+    })
+    }else{
+      document.querySelectorAll('input[type="radio"').forEach((each) => {
+      each.style.display = "inline";
+    })
+    
+    document.querySelectorAll('input[type="checkbox"]').forEach((each) => {
+      each.style.display = "none";
+    })
+    }
+  })
+
+  document.getElementsByClassName('fa-trash-can')[0].addEventListener("click", () => {
+    document.querySelectorAll("input[type='checkbox']:checked").forEach((each) => {
+      each.parentElement.remove();
+    })
   })
 });

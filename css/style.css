@@ -257,3 +257,7 @@ section::-webkit-scrollbar-thumb:hover {
     padding: 0.9rem;
   }
 }
+
+input[type="checkbox"]{
+  display: none;
+}
