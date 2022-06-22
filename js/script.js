@@ -128,4 +128,8 @@ window.addEventListener("load", function(){
   document.querySelector("#completed-content").addEventListener("click", function(e){
       animate(e);
   })
+  
+  document.getElementById("lists-content").addEventListener("dbclick", function(){
+    alert("You click it!")
+  })
 });
