@@ -138,4 +138,8 @@ window.addEventListener("load", function(){
       document.getElementById("btn").style.backgroundColor = "#0060df";
     }
   });
+
+  document.getElementById("lists-content").addEventListener("dbclick", function(){
+    alert("You click it!")
+  })
 });
