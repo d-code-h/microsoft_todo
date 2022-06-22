@@ -169,6 +169,7 @@ window.addEventListener("load", () => {
   document.getElementsByClassName('fa-trash-can')[0].addEventListener("click", () => {
     document.querySelectorAll("input[type='checkbox']:checked").forEach((each) => {
       each.parentElement.remove();
-    })
-  })
+      document.getElementById("li-counter").innerHTML = Number(document.getElementById("li-counter").innerHTML) - 1;
+    });
+  });
 });
