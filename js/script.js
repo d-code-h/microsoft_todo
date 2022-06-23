@@ -147,8 +147,8 @@ window.addEventListener("load", () => {
 
   document.getElementById("lists-content").addEventListener("dblclick", () => {
     
-    if(document.querySelector('input[type="radio"').style.display === "inline"){
-      document.querySelectorAll('input[type="radio"').forEach((each) => {
+    if(document.querySelector('input[type="radio"]').style.display === "inline"){
+      document.querySelectorAll('input[type="radio"]').forEach((each) => {
       each.style.display = "none";
     })
     
@@ -156,7 +156,28 @@ window.addEventListener("load", () => {
       each.style.display = "inline";
     })
     }else{
-      document.querySelectorAll('input[type="radio"').forEach((each) => {
+      document.querySelectorAll('input[type="radio"]').forEach((each) => {
+      each.style.display = "inline";
+    })
+    
+    document.querySelectorAll('input[type="checkbox"]').forEach((each) => {
+      each.style.display = "none";
+    })
+    }
+  })
+  
+  document.getElementById("completed-content").addEventListener("dblclick", () => {
+    
+    if(document.querySelector('input[type="radio"]').style.display === "inline"){
+      document.querySelectorAll('input[type="radio"]').forEach((each) => {
+      each.style.display = "none";
+    })
+    
+    document.querySelectorAll('input[type="checkbox"]').forEach((each) => {
+      each.style.display = "inline";
+    })
+    }else{
+      document.querySelectorAll('input[type="radio"]').forEach((each) => {
       each.style.display = "inline";
     })
     
