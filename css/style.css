@@ -34,8 +34,8 @@ p {
   background-color: #fff;
 }
 p, #completed-header, #lists-header {
-  padding: 0.3em 1rem 0.3rem 0.8rem;
   height: 3em;
+  padding: 0.3em 1rem 0.3rem 0.8rem;
   font-size: 0.7em;
   border-radius: 0.4em;
   margin: 0.2rem;
@@ -92,6 +92,8 @@ span .fa-plus {
 }
 #completed-content {
   display: none;
+}
+#completed-content span {
   text-decoration: line-through;
 }
 
