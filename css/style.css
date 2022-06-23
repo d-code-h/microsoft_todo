@@ -90,7 +90,7 @@ span .fa-plus {
   text-align: center;
   margin-right: 0.8rem;
 }
-#completed-content {
+#completed-content, #lists-content {
   display: none;
 }
 #completed-content span {
