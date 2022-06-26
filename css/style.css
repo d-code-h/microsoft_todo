@@ -172,25 +172,25 @@ span #cal {
     overflow: auto;
   }
   
-/* section::-webkit-scrollbar {
+section::-webkit-scrollbar {
   width: 0.4rem;
-} */
+}
 /* Track */
-/* section::-webkit-scrollbar-track {
+section::-webkit-scrollbar-track {
   background: #f1f1f1; 
-} */
+}
  
 /* Handle */
-/* section::-webkit-scrollbar-thumb {
+section::-webkit-scrollbar-thumb {
   background: #909090; 
-} */
+}
 
 /* Handle on hover */
-/* section::-webkit-scrollbar-thumb:hover {
+section::-webkit-scrollbar-thumb:hover {
   background: #0060df; 
 }
- */
-/* @media only screen and (min-width:600px) {Undone Todo Section
+
+@media only screen and (min-width:600px) {Undone Todo Section
   header, body {
    background-image: url("https://images.unsplash.com/photo-1653676934208-021a2b5e7ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM2fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80");
    background-size: cover;
@@ -248,9 +248,8 @@ span #cal {
   width: 8rem;
   height: 8rem;
 }
-} */
-
-/* 
+}
+ 
 @media only screen and (orientation: landscape) {
   span .fa-plus {
     width: 1.5em;
@@ -263,5 +262,5 @@ span #cal {
     height: 0.1rem;
     font-size: 1.3rem;
     padding: 0.9rem;
-  } */
+  } 
 }
