@@ -1,18 +1,19 @@
 /*Main and Top Section*/
-body, html {
+html, body {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
-header, html {
+body, header {
   background-image: url('https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
   background-repeat: no-repeat;
-  background-size: cover;
+/*   background-size: cover */;
 }
 body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-size: 150%;
   margin: 0;
+  padding-bottom: 4em;
 }  
 header {
   position: sticky;
@@ -34,8 +35,8 @@ p {
   background-color: #fff;
 }
 p, #completed-header, #lists-header {
-  padding: 0.3em 1rem 0.3rem 0.8rem;
   height: 3em;
+  padding: 0.3em 1rem 0.3rem 0.8rem;
   font-size: 0.7em;
   border-radius: 0.4em;
   margin: 0.2rem;
@@ -90,8 +91,10 @@ span .fa-plus {
   text-align: center;
   margin-right: 0.8rem;
 }
-#completed-content {
+#completed-content, #lists-content {
   display: none;
+}
+#completed-content span {
   text-decoration: line-through;
 }
 
@@ -162,30 +165,33 @@ span #cal {
   color: #0060df;
 }
 
-section::-webkit-scrollbar {
+#completed, #lists {
+    /* display: inline-block; */
+    /* width: 45%; */
+    /* vertical-align: top; */
+    overflow: auto;
+  }
+  
+/* section::-webkit-scrollbar {
   width: 0.4rem;
-}
+} */
 /* Track */
-section::-webkit-scrollbar-track {
+/* section::-webkit-scrollbar-track {
   background: #f1f1f1; 
-}
+} */
  
 /* Handle */
-section::-webkit-scrollbar-thumb {
+/* section::-webkit-scrollbar-thumb {
   background: #909090; 
-}
+} */
 
 /* Handle on hover */
-section::-webkit-scrollbar-thumb:hover {
+/* section::-webkit-scrollbar-thumb:hover {
   background: #0060df; 
 }
-
-@media only screen and (min-width:600px) {
-  body, html {
-    width: 100%;
-    height: 100%;
-  }
-  header, html {
+ */
+/* @media only screen and (min-width:600px) {Undone Todo Section
+  header, body {
    background-image: url("https://images.unsplash.com/photo-1653676934208-021a2b5e7ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM2fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80");
    background-size: cover;
    background-repeat: no-repeat;
@@ -210,8 +216,8 @@ section::-webkit-scrollbar-thumb:hover {
     align-items: center;
   }
   
-  /* Undone Todo Section*/
- #completed, #main {
+  
+ #completed, #lists {
     display: inline-block;
     width: 45%;
     vertical-align: top;
@@ -242,7 +248,9 @@ section::-webkit-scrollbar-thumb:hover {
   width: 8rem;
   height: 8rem;
 }
-}
+} */
+
+/* 
 @media only screen and (orientation: landscape) {
   span .fa-plus {
     width: 1.5em;
@@ -255,5 +263,5 @@ section::-webkit-scrollbar-thumb:hover {
     height: 0.1rem;
     font-size: 1.3rem;
     padding: 0.9rem;
-  }
+  } */
 }
