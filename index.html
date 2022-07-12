@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap">  
-  <link rel="stylesheet" href="./css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<body>
-  <article>
-    <header>
-      <h1>TODO</h1>
-      <i class="fa fa-trash-can"></i>
-    </header>
-    <section id="main">
-      <section id="lists">
-        <section id="lists-header">
-          <i id="li" class="fa fa-angle-right"></i>
-          <span>My Tasks</span>
-          <span id="li-counter">0</span>
+  <body>
+    <article>
+      <header>
+        <h1>TODO</h1>
+        <i class="fa fa-trash-can"></i>
+      </header>
+      <section id="main">
+        <section id="lists">
+          <section id="lists-header">
+            <i id="li" class="fa fa-angle-right"></i>
+            <span>My Tasks</span>
+            <span id="li-counter">0</span>
+          </section>
+          <section id="lists-content"></section>
         </section>
-        <section id="lists-content">
+
+        <!-- Completed Todos -->
+        <section id="completed">
+          <section id="completed-header">
+            <i id="co" class="fa fa-angle-right"></i>
+            <span>Completed</span>
+            <span id="co-counter">0</span>
+          </section>
+
+          <section id="completed-content"></section>
         </section>
       </section>
-    
-      <!-- Completed Todos -->
-      <section id="completed">
-      <section id="completed-header">
-        <i id="co" class="fa fa-angle-right"></i>
-        <span>Completed</span>
-        <span id="co-counter">0</span>
-      </section>
-      
-      <section id="completed-content">
-      </section>
-    </section>
-  </section>
-    
-  <!-- Form bar -->
-  <section id="form">
-    <form action="#" method="POST">
-      <input type="radio" name="status" disabled />
-      <input type="text" name="add" placeholder="Add a task" autofocus/>
-      <button type="submit" id="btn"><i class="fa fa-arrow-up"></i></button>
-    </form>
-    <p>
-      <span>
-        <i id="cal" class="fa fa-calendar-alt"></i>Set due date
-      </span>
-      <span>
-        <img src="./images/bell.png" alt="A bell icon" />
+
+      <!-- Form bar -->
+      <section id="form">
+        <form action="#" method="POST">
+          <input type="radio" name="status" disabled aria-hidden="true" />
+          <input type="text" name="add" placeholder="Add a task" autofocus />
+          <button aria-label="arrow up" type="submit" id="btn">
+            <i class="fa fa-arrow-up"></i>
+          </button>
+        </form>
+        <p>
+          <span> <i id="cal" class="fa fa-calendar-alt"></i>Set due date </span>
+          <span>
+            <img src="./images/bell.png" alt="A bell icon" />
             Remind me
-      </span>
-      <span>
-        <img src="./images/repeat.png" alt="A repeat icon" />
-          Repeat
-      </span> 
-    </p>
-  </section>
-  <!-- Add Todo button -->
-    <span><i class="fa fa-plus"></i></span>
-  </article>
+          </span>
+          <span>
+            <img src="./images/repeat.png" alt="A repeat icon" />
+            Repeat
+          </span>
+        </p>
+      </section>
+      <!-- Add Todo button -->
+      <span><i class="fa fa-plus"></i></span>
+    </article>
 
-  <script src="./js/script.js">
-  </script>
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
