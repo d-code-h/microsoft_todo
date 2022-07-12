@@ -1,8 +1,0 @@
-{
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "files.autoSave": "onFocusChange",
-  "files.autoSaveDelay": 1000,
-  "editor.formatOnType": true
-}

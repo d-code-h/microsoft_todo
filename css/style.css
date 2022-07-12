@@ -1,25 +1,29 @@
 /*Main and Top Section*/
-html, body {
+html,
+body {
   width: 100%;
   height: auto;
 }
-body, header {
-  background-image: url('https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+body,
+header {
+  background-image: url("https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
   background-repeat: no-repeat;
-/*   background-size: cover */;
+  /*   background-size: cover */
 }
 body {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 150%;
   margin: 0;
   padding-bottom: 4em;
-}  
+}
 header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
-h1, i{
+h1,
+i {
   font-size: 1.3em;
   color: #fff;
   margin-left: 4%;
@@ -34,7 +38,9 @@ h1 {
 p {
   background-color: #fff;
 }
-p, #completed-header, #lists-header {
+p,
+#completed-header,
+#lists-header {
   height: 3em;
   padding: 0.3em 1rem 0.3rem 0.8rem;
   font-size: 0.7em;
@@ -51,8 +57,9 @@ p input {
 }
 #status {
   margin-right: 0.8rem;
-} 
-.fa-star, img {
+}
+.fa-star,
+img {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: auto;
@@ -79,19 +86,25 @@ span .fa-plus {
 }
 
 /* Completed Todo Section*/
-#completed-header i, #completed-header span, #lists-header i, #lists-header span {
+#completed-header i,
+#completed-header span,
+#lists-header i,
+#lists-header span {
   margin-right: 0.5rem;
 }
-#completed-header, #lists-header {
+#completed-header,
+#lists-header {
   color: #fff;
   font-weight: 400;
 }
-#completed-header i:first-child, #lists-header i:first-child {
-  width: 1rem;  
+#completed-header i:first-child,
+#lists-header i:first-child {
+  width: 1rem;
   text-align: center;
   margin-right: 0.8rem;
 }
-#completed-content, #lists-content {
+#completed-content,
+#lists-content {
   display: none;
 }
 #completed-content span {
@@ -107,7 +120,10 @@ span .fa-plus {
   position: fixed;
   bottom: 0;
 }
-#form p, input:disabled, input[name="add"], button {
+#form p,
+input:disabled,
+input[name="add"],
+button {
   height: 1.5rem;
   font-size: 0.88rem;
   font-weight: 300;
@@ -121,11 +137,12 @@ input[name="add"] {
   margin: 0;
   width: 62%;
 }
-input[name="add"], input[name="add"]:focus {
+input[name="add"],
+input[name="add"]:focus {
   border: none;
   outline: none;
 }
-input[name="add"]{
+input[name="add"] {
   padding: 0.4rem;
 }
 button {
@@ -144,7 +161,8 @@ button i {
   margin: auto;
 }
 
-span img, #cal {
+span img,
+#cal {
   font-size: 1.2rem;
   height: 1rem;
   width: 1rem;
@@ -154,7 +172,8 @@ span img, #cal {
 span #cal {
   color: black;
 }
-#form p span:nth-child(2), #form p span:nth-child(3) {
+#form p span:nth-child(2),
+#form p span:nth-child(3) {
   margin-left: 0.3rem;
 }
 
@@ -165,41 +184,44 @@ span #cal {
   color: #0060df;
 }
 
-#completed, #lists {
-    /* display: inline-block; */
-    /* width: 45%; */
-    /* vertical-align: top; */
-    overflow: auto;
-  }
-  
+#completed,
+#lists {
+  /* display: inline-block; */
+  /* width: 45%; */
+  /* vertical-align: top; */
+  overflow: auto;
+}
+
 section::-webkit-scrollbar {
   width: 0.4rem;
 }
 /* Track */
 section::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 section::-webkit-scrollbar-thumb {
-  background: #909090; 
+  background: #909090;
 }
 
 /* Handle on hover */
 section::-webkit-scrollbar-thumb:hover {
-  background: #0060df; 
+  background: #0060df;
 }
 
-@media only screen and (min-width:600px) {Undone Todo Section
-  header, body {
-   background-image: url("https://images.unsplash.com/photo-1653676934208-021a2b5e7ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM2fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80");
-   background-size: cover;
-   background-repeat: no-repeat;
+@media only screen and (min-width: 600px) {
+  Undone Todo Section header,
+  body {
+    background-image: url("https://images.unsplash.com/photo-1653676934208-021a2b5e7ca3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM2fENEd3V3WEpBYkV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   body {
     font-size: 200%;
   }
-  h1, i{
+  h1,
+  i {
     font-size: 1.2em;
     color: #fff;
   }
@@ -209,15 +231,16 @@ section::-webkit-scrollbar-thumb:hover {
     width: 45%;
   }
   header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  
- #completed, #lists {
+
+  #completed,
+  #lists {
     display: inline-block;
     width: 45%;
     vertical-align: top;
@@ -233,27 +256,27 @@ section::-webkit-scrollbar-thumb:hover {
   }
 
   span .fa-plus {
-  width: 4em;
-  height: 4em;  
-  position: fixed;
-  top: 90%;
-  left: 76%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 4em;
+    height: 4em;
+    position: fixed;
+    top: 90%;
+    left: 76%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fa-plus {
+    color: #000;
+    width: 8rem;
+    height: 8rem;
+  }
 }
 
-.fa-plus {
-  color: #000;
-  width: 8rem;
-  height: 8rem;
-}
-}
- 
 @media only screen and (orientation: landscape) {
   span .fa-plus {
     width: 1.5em;
-    height: 1.5em;  
+    height: 1.5em;
     top: 74%;
     left: 87%;
   }
@@ -262,5 +285,5 @@ section::-webkit-scrollbar-thumb:hover {
     height: 0.1rem;
     font-size: 1.3rem;
     padding: 0.9rem;
-  } 
+  }
 }
